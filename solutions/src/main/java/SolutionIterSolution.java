@@ -43,7 +43,7 @@ class SolutionIter implements Iterable<Integer> {
 
             private boolean isInteger(String line) {
                 try {
-                    int i =Integer.parseInt(line);
+                    int i = Integer.parseInt(line);
                     return i >= -1_000_000_000 && i <= 1_000_000_000;
                 } catch (Exception e) {
                     return false;
@@ -52,7 +52,7 @@ class SolutionIter implements Iterable<Integer> {
 
             @Override
             public Integer next() {
-                if(nextLine == null) {
+                if (nextLine == null) {
                     throw new RuntimeException("No more elements");
                 }
                 return Integer.parseInt(nextLine);
